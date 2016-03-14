@@ -5,16 +5,17 @@ package BowlerEquals;
  * This class holds basic information about a Bowler.
  * It is used as an example of the toString( ) method and the equals( )
  * method.
- * 
- * @author L. Lehmann 
- * @version 3/10/2014
+ *
+ * @auther Arion Almond
+ * @author L. Lehmann
+ * @version 3/13/2016
  */
 public class Bowler
 {
     private String lastName;
     private String firstName;
     private double highScore;
-    
+
    //the default, no-args constructor
     public Bowler( )
     {
@@ -22,7 +23,7 @@ public class Bowler
        firstName = new String("unknown");
         highScore = 0;
     }
-    
+
     //the constructror that allows the user of this class to provide initiall values
     //for the three fields
     public Bowler(String inL, String inF, double inH)
@@ -31,30 +32,30 @@ public class Bowler
         firstName = new String(inF);
         highScore = inH;
     }
-   
+
     public String getLastName( )
     {
         return lastName;
     }
-    
+
     public String getFirstName( )
     {
         return firstName;
-        
+
     }
-    
+
     public double getHighScore( )
     {
         return highScore;
     }
-    
+
    //the toString method MUST have this header
    //the toString( ) method returns a textual representation of the state of the object
     public String toString( )
     {
         return firstName + "  " + lastName + " " + highScore;
     }
-    
+
     //the equals( ) method can be called to determine if two distinct
     //Bowler obhjects should be considered "equal"
     //The equals( ) method returns true if the objects should be considered
@@ -65,17 +66,17 @@ public class Bowler
     public boolean equals(Bowler other)//<--note the parater is of type Bowler reference
     {
        //the keyword this referes to the reference object that claaed the method
-        return this.highScore == other.highScore 
+        return this.highScore == other.highScore
                && this.lastName.equals(other.lastName);//this is calling the equals method of the String class because lastName is a String
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
 }
